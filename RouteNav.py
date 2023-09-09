@@ -39,20 +39,6 @@ class WeightedGraph(Graph):
     def cost(self, from_id: Location, to_id: Location) -> float: pass
 
 
-class Queue:
-    def __init__(self):
-        self.elements = collections.deque()
-    
-    def empty(self) -> bool:
-        return not self.elements
-    
-    def put(self, x):
-        self.elements.append(x)
-    
-    def get(self):
-        return self.elements.popleft()
-    
-
 GridLocation = tuple[float, float]
 
 class GridWithWeights(SimpleGraph):
@@ -120,14 +106,15 @@ def a_star_search(graph: WeightedGraph, start: Location, goal: Location):
                 frontier.put(next[0], priority)
                 came_from[next[0]] = current
     
-    return came_from
+    return came_from, cost_so_far
 
 
 
 print('Reachable from A:')
-print(reconstruct_path(a_star_search(busGraph, 'A', 'B'), 'A', 'B'))
+print(reconstruct_path(a_star_search(busGraph, 'A', 'B')[0], 'A', 'B'))
 print('Reachable from E:')
-print(reconstruct_path(a_star_search(busGraph, 'B', 'E'), 'B', 'E'))
+print(reconstruct_path(a_star_search(busGraph, 'B', 'E')[0], 'B', 'E'))
+print(a_star_search(busGraph, 'A', 'E'))
 
         
     
