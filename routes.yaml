@@ -1,4 +1,5 @@
 # stops are written as "name, address"
+# routes start and end at the same location for convenience
 12th man:
 - MSC, 275 Joe Routt Blvd, College Station, TX 77840
 - Beutel, A.P. Beutel Health Center, 311 Houston St Bldg. 520, College Station, TX 77843
@@ -12,6 +13,7 @@
 - Lot 71, 230 Agronomy Rd, College Station, TX 77840
 - Vet School - Inbound, Veterinary & Biomedical Education Complex, 660 Raymond Stotzer Pkwy, College Station, TX 77843
 - Wehner - Inbound, 4113 TAMU, College Station, TX 77845
+- MSC, 275 Joe Routt Blvd, College Station, TX 77840
 Bonfire:
 - Commons, 676 Lubbock St, College Station, TX 77840
 - Ross and Bizzell - North, Ross Street & Bizzell Street, College Station, TX 77840
@@ -28,6 +30,7 @@ Bonfire:
 - Ross and Bizzell (South), North, Ross Street & Bizzell Street, College Station, TX 77840
 - Southside Rec Center, 633 Bizzell St, College Station, TX 77843
 - Lewis Street, Lewis Street, College Station, TX 77840
+- Commons, 676 Lubbock St, College Station, TX 77840
 Bush School:
 - MSC, 275 Joe Routt Blvd, College Station, TX 77840
 - Kleberg, Kleberg Center, College Station, TX 77845
@@ -71,6 +74,7 @@ Howdy:
 - Olsen Field @ Blue Bell Park, 301 Olsen Blvd, College Station, TX 77840
 - Rec Center, 187 Corrington Dr, College Station, TX 77843
 - Kleberg - Inbound, Kleberg Center, College Station, TX 77845
+- MSC Bus Stop, College Station, TX 77840
 Yell Practice:
 - MSC, 275 Joe Routt Blvd, College Station, TX 77840
 - Beutel, A.P. Beutel Health Center, 311 Houston St Bldg. 520, College Station, TX 77843
