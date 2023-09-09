@@ -1,12 +1,10 @@
-# I think we'd like for each stop to be in the format
-# name, address
 12th man:
 - MSC, 275 Joe Routt Blvd, College Station, TX 77840
 - Beutel
-- Wehner
-- Vet School
-- Transit
-- Facilities Services
+- Wehner - Outbound
+- Vet School - Outbound
+- Transit - Outbound
+- Facilities Services - Outbound
 - GSC, 750 Agronomy Rd, College Station, TX 77840
 - GSC, 750 Agronomy Rd, College Station, TX 77840
 - Facilities Services - Inbound
@@ -19,7 +17,7 @@ Bonfire:
 - Ross and Bizzell - North
 - Ross and Ireland - North
 - Asbury Water Tower
-- Kleberg
+- Kleberg - Outbound
 - Rec Center
 - Lot 100 G
 - Reed Arena, 730 Olsen Blvd, College Station, TX 77843
@@ -33,11 +31,11 @@ Bonfire:
 - Lewis Street
 Bush School:
 - MSC, 275 Joe Routt Blvd, College Station, TX 77840
-- Kleberg
+- Kleberg - Outbound
 - Reed Arena/Lot 97
-- Ag Building
+- Ag Building - Outbound
 - GGB
-- Bush School
+- Bush School - Outbound
 - GERB
 - Lot 108/UPD
 - Technology Loop
@@ -77,12 +75,12 @@ Howdy:
 Yell Practice:
 - MSC, 275 Joe Routt Blvd, College Station, TX 77840
 - Beutel
-- Wehner
-- School of Public Health
+- Wehner - Outbound
+- School of Public Health - Outbound
 - White Creek 1
 - White Creek 2
 - Lot 101
-- NCTM, 100 Discovery Dr, College Station, TX 77845
+- NCTM
 - VTED
 - Houston Building
 - White Creek Community Center
