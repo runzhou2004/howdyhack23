@@ -82,7 +82,7 @@ def time_to_stops(location):
 
     
 #print(walking_time("MSC College Station", "Ross and Ireland - North, Ross Street & Ireland Street, College Station, TX 77840"))
-print(gmap.distance_matrix("MSC College Station", "Ross Street & Bizzell Street, College Station, TX 77840", mode='walking'))
+#print(gmap.distance_matrix("MSC College Station", "Ross Street & Bizzell Street, College Station, TX 77840", mode='walking'))
 
 #print(time_to_stops("MSC College Station"))
 
@@ -90,11 +90,39 @@ def next_bus_stop(bus_stop, route):
     next_stop = route[(route.index(bus_stop)+1) % len(route)]
     return ([(next_stop, driving_time(bus_stop.split(',',1)[1],next_stop.split(',',1)[1]))])
 
+'''def bus_stop_to_end(end_location):
+    runyan = []
+    for route in Routes:
+        for i in route:
+            runyan.append((end_location, walking_time(i.split(',',1)[1], end_location.split(',',1)[1])))
+    return runyan'''
+
+start_location = "MSC, 275 Joe Routt Blvd, College Station, TX 77840"
+end_location = "Zachary, 125 Spence St, College Station, TX 77840"
+
+#print(bus_stop_to_end(end_location))
+
 #print(next_bus_stop("Commons, 676 Lubbock St, College Station, TX 77840", Route1))
+
+
+'''for stop in Route1:
+    print(stop)
+    print(end_location)
+    print(gmap.distance_matrix(stop.split(',',1)[1], end_location.split(',',1)[1], mode='walking'))
+    print(stop.split(',',1)[1])
+    paths[stop]=time_to_stops(stop) + next_bus_stop(stop,Route1) + [(end_location, walking_time(stop.split(',',1)[1], end_location.split(',',1)[1]))]  '''     
+
 
 for route in Routes:
     for stop in route:
-        paths[stop]=time_to_stops(stop) + next_bus_stop(stop,route)
+        paths[stop]=time_to_stops(stop) + next_bus_stop(stop,route) + [(end_location, walking_time(stop.split(',',1)[1], end_location.split(',',1)[1]))]
+
+#print(paths["Commons, 676 Lubbock St, College Station, TX 77840"])
+        
+for route in Routes:
+    for stop in route:
+        paths[start_location]= time_to_stops(start_location)
+        
         
 print(paths)
         
@@ -110,8 +138,6 @@ print(closest_stop("MSC College Station", Route1))
 print(walking_time("MSC College Station", "MSC College Station"))
 #print(closest_stops(Route1[0]))'''
 
-
-start_location = "MSC College Station"
 
 '''for route in Routes:
     for stop in route:
