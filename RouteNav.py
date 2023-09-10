@@ -183,7 +183,7 @@ def a_star_search(graph: WeightedGraph, start: Location, goal: Location):
 
 
 start = "Commons"
-end = 'Olsen Field @ Blue Bell Park'
+end = 'Ag Building - Outbound'
 
 came_from, cost_so_far = a_star_search(busGraph, start, end)
 print(reconstruct_path(came_from, start, end))
