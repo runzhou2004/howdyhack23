@@ -9,7 +9,6 @@ from pprint import pprint
 import googlemaps
 import geopy.distance
 from geopy.geocoders import GoogleV3
-import pandas as pd
 import yaml
 
 with open('routes.yaml', 'r') as file:
@@ -57,17 +56,34 @@ def closest_stop(currentLocation, route):
 paths = dict()
 start_location = "MSC College Station"
 
-def neighboring_locations(start_location)
 
-for Route in Routes:
-    for Stop in Route:
-        neighboring_locations = []
-        closest_stops = []
-        for n in Routes:
-            neighboring_locations.append((closest_stop(current_stop,n), walking_time(closest_stop(current_location,n))
-            paths[Stop] =                                   
-                        
-            
+with open("routes.yaml", "r") as stream:
+    try:
+        data = (yaml.safe_load(stream))
+    except yaml.YAMLError as exc:
+        print(exc)
+
+out = {}
+names = ['12th man', 'Bonfire', 'Bush School', 'Gig Em', 'Howdy', 'Yell Practice']
+import math
+for route in names:
+    for addy in data[route]:
+        addy = addy.split(',', 1)
+        location = geolocator.geocode(addy[1])
+        long = location.longitude
+        lat = location.latitude
+        radiusEarth = 3958.8
+        longMiles = (math.pi/180)*radiusEarth*math.cos(lat)
+        latMiles = (math.pi/180)*radiusEarth*math.cos(long)
+
+        
+        out[addy[0]] = ((location.latitude*68.88712121212122)/20, (location.longitude*59.577651515151516)/20)
+
+with open('data.yml', 'w') as outfile:
+    yaml.dump(out, outfile, default_flow_style=False)
+    
+#location = geolocator.geocode("string")   
+#.long, .lat
         
         
 # {"MSC": [("Rudder", Time), ()]}
