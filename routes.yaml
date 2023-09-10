@@ -2,9 +2,9 @@
 # routes start and end at the same location for convenience
 12th man:
 - MSC, 275 Joe Routt Blvd, College Station, TX 77840
-- Beutel, A.P. Beutel Health Center, 311 Houston St Bldg. 520, College Station, TX 77843
-- Wehner, 4113 TAMU, College Station, TX 77845
-- Vet School, Veterinary & Biomedical Education Complex, 660 Raymond Stotzer Pkwy, College Station, TX 77843
+- A.P. Beutel Health Center, 311 Houston St Bldg. 520, College Station, TX 77843
+- Wehner Building, 210 Olsen Blvd, College Station, TX 77843
+- Veterinary & Biomedical Education Complex, 660 Raymond Stotzer Pkwy, College Station, TX 77843
 - Transit, 969 Agronomy Rd, College Station, TX 77840
 - Facilities Services, 600 Agronomy Rd, College Station, TX 77840
 - GSC, 750 Agronomy Rd, College Station, TX 77840
@@ -12,7 +12,7 @@
 - Transit - Inbound, 969 Agronomy Rd, College Station, TX 77840
 - Lot 71, 230 Agronomy Rd, College Station, TX 77840
 - Veterinary & Biomedical Education Complex, 660 Raymond Stotzer Pkwy, College Station, TX 77843
-- Wehner - Inbound, 4113 TAMU, College Station, TX 77845
+- Wehner Building, 210 Olsen Blvd, College Station, TX 77843
 Bonfire:
 - Commons, 676 Lubbock St, College Station, TX 77840
 - Ross and Bizzell - North, Ross Street & Bizzell Street, College Station, TX 77840
@@ -74,7 +74,7 @@ Howdy:
 Yell Practice:
 - MSC, 275 Joe Routt Blvd, College Station, TX 77840
 - A.P. Beutel Health Center, 311 Houston St Bldg. 520, College Station, TX 77843
-- Wehner, 4113 TAMU, College Station, TX 77845
+- Wehner Building, 210 Olsen Blvd, College Station, TX 77843
 - School of Public Health, 212 Adriance Lab Rd, College Station, TX 77843
 - White Creek 1, 225 Discovery Dr, College Station, TX 77845
 # - White Creek 2, 225 Discovery Dr, College Station, TX 77845
@@ -84,4 +84,4 @@ Yell Practice:
 - Houston Building, 200 Discovery Dr, College Station, TX 77845
 - White Creek Community Center, 667 W Campus Blvd, College Station, TX 77840
 - School of Public Health - Inbound, 212 Adriance Lab Rd, College Station, TX 77843
-- Wehner - Inbound, 4113 TAMU, College Station, TX 77845
+- Wehner Building, 210 Olsen Blvd, College Station, TX 77843
