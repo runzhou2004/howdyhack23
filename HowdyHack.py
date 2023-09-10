@@ -88,7 +88,7 @@ def time_to_stops(location):
 
 def next_bus_stop(bus_stop, route):
     next_stop = route[(route.index(bus_stop)+1) % len(route)]
-    return ([(next_stop, driving_time(bus_stop.split(',',1)[1],next_stop.split(',',1)[1]))])
+    return ([(str(next_stop).split(',')[0], driving_time(bus_stop.split(',',1)[1],next_stop.split(',',1)[1]))])
 
 '''def bus_stop_to_end(end_location):
     runyan = []
@@ -115,16 +115,18 @@ end_location = "Zachary, 125 Spence St, College Station, TX 77840"
 
 for route in Routes:
     for stop in route:
-        paths[stop]=time_to_stops(stop) + next_bus_stop(stop,route) + [(end_location, walking_time(stop.split(',',1)[1], end_location.split(',',1)[1]))]
+        paths[str(stop).split(',')[0]]=next_bus_stop(stop,route)
 
 #print(paths["Commons, 676 Lubbock St, College Station, TX 77840"])
         
-for route in Routes:
-    for stop in route:
-        paths[start_location]= time_to_stops(start_location)
         
         
-print(paths)
+import pickle
+
+with open('readme.txt', 'w') as f:
+    f.write(str(paths))
+
+
         
 
 
