@@ -54,15 +54,68 @@ class GridWithWeights(SimpleGraph):
 
 busGraph = SimpleGraph()
 busGraph.edges = {
-    
-    'A': [('B', 1)],
-    'B': [('C', 2)],
-    'C': [('B', 3), ('D', 4), ('F', 5)],
-    'D': [('C', 6), ('E', 7)],
-    'E': [('F', 8)],
-    'F': [],
-    
+    'Commons': [('Ross and Bizzel', 3)],
+    'Ross and Bizzel': [('Ross and Ireland - North', 1)],
+    'Ross and Ireland - North': [('Asbury Water Tower', 1)],
+    'Asbury Water Tower': [('Fish Pond', 4)],
+    'Kleberg': [('Reed Arena/Lot 97', 2)],
+    'Rec Center': [('Kleberg', 3)],
+    'Lot 100 G, Tom Chandler Dr': [('Reed Arena', 2)],
+    'Reed Arena': [('Kleberg', 2)],
+    'Kleberg': [('MSC Bus Stop', 9)],
+    'MSC - ILCB, 215 Lamar St': [('MSC', 2)],
+    'Fish Pond': [('Ross and Ireland - South', 2)],
+    'Ross and Ireland (South)': [('Ross and Bizzell (South), North', 2)],
+    'Ross and Bizzell (South), North': [('Southside Rec Center', 5)],
+    'Southside Rec Center': [('Lewis Street', 2)],
+    'Lewis Street': [('Commons', 2)],
+    'MSC': [('Beutel', 3)],
+    'Beutel': [('Wehner', 3)],
+    'Wehner': [('Vet School', 8)],
+    'School of Public Health': [('White Creek 1', 2)],
+    'White Creek 1': [('Lot 101', 1)],
+    'Lot 101': [('NCTM', 3)],
+    'NCTM': [('VTED', 2)],
+    'VTED': [('Houston Building', 1)],
+    'Houston Building': [('White Creek Community Center', 1)],
+    'White Creek Community Center': [('School of Public Health', 1)],
+    'School of Public Health': [('Wehner', 6)],
+    'Wehner': [('MSC', 5)],
+    'Ross and Ireland - South': [('Ross and Bizzell - South, Ross Street & Bizzell Street', 2)],
+    'Ross and Bizzell - South, Ross Street & Bizzell Street': [('Wisenbaker - East', 3)],
+    'Wisenbaker - East': [('The Gardens', 7)],
+    'The Gardens': [('Becky Gates Center', 8)],
+    'Becky Gates Center': [('Hensel @ Texas', 2)],
+    'Hensel @ Texas': [('Zachry', 2)],
+    'Zachry': [('Ross and Bizzel', 1)],
+    'Reed Arena/Lot 97': [('Ag Building', 7)],
+    'Ag Building': [('GGB', 9)],
+    'GGB': [('Bush School', 7)],
+    'Bush School': [('GERB', 9)],
+    'GERB': [('Lot 108/UPD', 1)],
+    'Lot 108/UPD': [('Technology Loop', 1)],
+    'Technology Loop': [('Lot 41/43', 2)],
+    'Lot 41/43': [('Bush School 0 Inbound', 8)],
+    'Bush School 0 Inbound': [('GGB', 8)],
+    'Ag Building': [('Reed Arena', 10)],
+    'Vet School': [('Transit', 3)],
+    'Transit': [('Facilities Services', 1)],
+    'Facilities Services': [('GSC', 1)],
+    'GSC': [('Facilities Services', 1)],
+    'Facilities Services': [('Transit', 2)],
+    'Transit': [('Lot 71', 1)],
+    'Lot 71': [('Vet School', 3)],
+    'Vet School': [('Wehner', 6)],
+    'MSC Bus Stop': [('A.P. Beutel Health Center', 9)],
+    'A.P. Beutel Health Center': [('Kleberg Center', 6)],
+    'Kleberg Center': [('420 John Kimbrough Blvd', 1)],
+    '420 John Kimbrough Blvd': [('Texas A&M University', 9)],
+    'Texas A&M University': [('503 George Bush Dr W', 10)],
+    '503 George Bush Dr W': [('Park West', 9)],
+    'Park West': [('Olsen Field @ Blue Bell Park', 6)],
+    'Olsen Field @ Blue Bell Park': [('Rec Center', 3)]
 }
+
 
 
 def heuristic() -> float:
@@ -109,12 +162,13 @@ def a_star_search(graph: WeightedGraph, start: Location, goal: Location):
     return came_from, cost_so_far
 
 
+start = "Commons"
+end = "Ross and Ireland - South"
 
-print('Reachable from A:')
-print(reconstruct_path(a_star_search(busGraph, 'A', 'B')[0], 'A', 'B'))
-print('Reachable from E:')
-print(reconstruct_path(a_star_search(busGraph, 'B', 'E')[0], 'B', 'E'))
-print(a_star_search(busGraph, 'A', 'E'))
+came_from, cost_so_far = a_star_search(busGraph, start, end)
+print(reconstruct_path(came_from, start, end))
+print('total time: ', cost_so_far[end])
+
 
         
     
